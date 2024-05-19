@@ -50,8 +50,24 @@ const BookContext = (props) => {
     }
   };
 
+  //add book
+  const addBook = async (book) => {
+    const res = await fetch(`${host}/books`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(book),
+    });
+    const data = await res.json();
+    setBooks([...books, data]);
+    setAllBooks([...allBooks, data]);
+  };
+
   return (
-    <Context.Provider value={{ books, getAllBooks, getBook, searchBook }}>
+    <Context.Provider
+      value={{ books, getAllBooks, getBook, searchBook, addBook }}
+    >
       {props.children}
     </Context.Provider>
   );

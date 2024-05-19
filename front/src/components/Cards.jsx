@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useEffect } from "react";
-import Context from "./Context";
+import Context from "../context/Context";
+import Header from "./Header";
 
 const Cards = () => {
   const { books, getAllBooks } = useContext(Context);
@@ -10,15 +11,18 @@ const Cards = () => {
   }, []);
 
   return (
-    <div className="cards">
-      {books.map((book) => (
-        <div className="card" key={book.id}>
-          <img src={book.thumbnailUrl} alt="pic" />
-          <h3>{book.title}</h3>
-          <p>{book.isbn}</p>
-        </div>
-      ))}
-    </div>
+    <>
+      <Header />
+      <div className="cards">
+        {books.map((book) => (
+          <div className="card" key={book.id}>
+            <img src={book.thumbnailUrl} alt="pic" />
+            <h3>{book.title}</h3>
+            <p>{book.isbn}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 

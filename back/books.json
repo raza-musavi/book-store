@@ -1866,8 +1866,12 @@
     "categories": ["Java"]
   },
   {
-    "id": "200",
-    "title": "new book",
-    "isbn": "123786"
+    "id": 138,
+    "title": "new book yar",
+    "authors": ["Salat", "Ahsan"],
+    "isbn": "198246",
+    "pagesCount": "536",
+    "categories": ["java", "html", "wadani"],
+    "thumbnailUrl": "https://webneel.com/sites/default/files/images/download/thumb/old-book-with-blank-cover%201_0.jpg"
   }
 ]

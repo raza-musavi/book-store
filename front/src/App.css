@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .header {
   background-color: #6e6f72;
   display: flex;
@@ -24,4 +29,23 @@
 .card img {
   width: 100%;
   object-fit: cover;
+}
+
+.input-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-head button {
+  margin-left: 5px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #283b72;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
 }

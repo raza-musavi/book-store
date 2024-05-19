@@ -1,14 +1,19 @@
 import "./App.css";
-import Header from "./components/Header";
-import BookContext from "./components/BookContext";
+import BookContext from "../src/context/BookContext";
 import Cards from "./components/Cards";
+import AddBook from "./components/AddBook";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
       <BookContext>
-        <Header />
-        <Cards />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Cards />} />
+            <Route path="/add" element={<AddBook />} />
+          </Routes>
+        </Router>
       </BookContext>
     </>
   );
